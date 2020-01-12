@@ -1,26 +1,16 @@
+
 $(document).ready(function () {
 
 
-  $('#burger-submit').click(function () {
-    $("#devour").hide();
-  });
-
-  $('#burger-submit').click(function () {
-
-    $('#devour').show();
-
-  });
-})
-
-
-
-
-
-$(document).ready(() => {
-
-
   console.log("test")
+  $("#addBurger").on("click", function () {
+    console.log("add burger...");
 
+    var burger = {
+      "burger_name": $(burgerName).val(),
+      "devour": $(burgerName).data("eaten")
+    };
+  })
 
   $.get("/api/burger", function (data) {
     if (data.length !== 0) {
@@ -62,7 +52,23 @@ $(document).ready(() => {
       });
 
 
-    $("#burger_name").val("");
+    $("#burger_name").val();
 
-  })
+  });
+
+  $("#devour").on("click", function (event) {
+    event.preventDefault();
+
+    console.log("test");
+    const eatenBurger = {
+      burger_name_final: $("#burger-area-devoured").val().trim(),
+      devour: true
+    };
+
+    console.log(eatenBurger);
+  });
+
+
+
+
 })

@@ -17,11 +17,12 @@
     {{#if this.devour}}
     <div class="burger-area-not-devoured">
         <div class="burger">
-            <h2 class="burger__name">{{this.burger_name}}</h2>
-            <img src="./assets/img/burger1.jpg" style="width: 100px; height:100px;">
-            <button data-id={{this.id}} class="devour" style="font-family: 'Bubblegum Sans', cursive;">Devour
-                it!</button>
-
+            <span>
+                <h2 class="burger__name" id="B-name">{{this.burger_name}}</h2>
+                <img src="./assets/img/burger1.jpg" style="width: 100px; height:100px;">
+                <button data-id={{this.id}} class="devour" style="font-family: 'Bubblegum Sans', cursive;">Devour
+                    it!</button>
+            </span>
         </div>
     </div>
 
