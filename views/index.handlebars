@@ -1,0 +1,49 @@
+<div id="test" class="jumbotron">
+    <h1 class="burger text-center">Eat Da Burger!</h1>
+</div>
+
+<div class="container">
+    <div id="burger-image">
+    </div>
+
+
+
+
+
+
+
+    {{#each hdbData}}
+
+    {{#if this.devour}}
+    <div class="burger-area-not-devoured">
+        <div class="burger">
+            <h2 class="burger__name">{{this.burger_name}}</h2>
+            <img src="./assets/img/burger1.jpg" style="width: 100px; height:100px;">
+            <button data-id={{this.id}} class="devour" style="font-family: 'Bubblegum Sans', cursive;">Devour
+                it!</button>
+
+        </div>
+    </div>
+
+    {{else}}
+    {{#unless this.devour}}
+    <div class="burger-area-devoured">
+        <div class="burger">
+            <h2 class="burger__name">{{this.burger_name}}</h2>
+            <img src="./assets/img/burger1.jpg" style="width: 100px; height:100px;">
+            <button data-id={{this.id}} class="devour" style="font-family: 'Bubblegum Sans', cursive;">Devour
+                it!</button>
+
+        </div>
+    </div>
+
+    {{/unless}}
+    {{/if}}
+    {{/each}}
+
+
+
+
+    <input id="burger-input">
+    <button id="burger-submit">Submit</button>
+</div>

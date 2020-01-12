@@ -1,0 +1,23 @@
+.jumbotron {
+  background-color: blueviolet;
+  color: white;
+  font-family: 'Bubblegum Sans', cursive;
+
+}
+#test {
+  background-color: blueviolet;
+  color: white;
+}
+
+
+.container {
+  text-align: center;
+}
+
+#burger-submit {
+  color: blueviolet;
+  background-color: white;
+  font-family: 'Bubblegum Sans', cursive;
+
+}
+
